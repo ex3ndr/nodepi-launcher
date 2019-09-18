@@ -12,8 +12,8 @@ if (!fs.existsSync(root)) {
 // Read registry
 let deps = {};
 try {
-    if (fs.existsSync(root + '/modules.json')) {
-        let ex = fs.readFileSync(root + '/modules.json', 'utf8');
+    if (fs.existsSync(root + '/registry.json')) {
+        let ex = fs.readFileSync(root + '/registry.json', 'utf8');
         let j = JSON.parse(ex);
         if (Array.isArray(j.packages)) {
             for (let p of j.packages) {
