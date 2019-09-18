@@ -1,0 +1,7 @@
+{
+    "name": "nodepi-launcher",
+    "version": "1.0.0",
+    "description": "Launcher for nodepi",
+    "bin": "launcher.js",
+    "license": "MIT"
+  }
