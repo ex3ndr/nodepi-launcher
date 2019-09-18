@@ -4,7 +4,7 @@ const fs = require('fs');
 
 // Init root directory
 console.log('Validate and prepare data dir');
-let root = (process.env.STORAGE_PATH || __dirname);
+let root = (process.env.STORAGE_PATH || process.cwd());
 if (!fs.existsSync(root)) {
     fs.mkdirSync(root);
 }
