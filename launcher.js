@@ -37,7 +37,7 @@ console.log('Writing package index');
 fs.writeFileSync(root + '/modules/package.json', JSON.stringify({
     name: 'nodepi_modules',
     dependencies: {
-        'nodepi': 'github:ex3ndr/nodepi',
+        'nodepi-server': 'latest',
         ...deps
     }
 }));
@@ -45,6 +45,7 @@ fs.writeFileSync(root + '/modules/package.json', JSON.stringify({
 // Install packages
 console.log('Installing packages');
 child_process.execSync('yarn', { cwd: root + '/modules/', stdio: 'inherit' });
+child_process.execSync('yarn upgrade nodepi-server', { cwd: root + '/modules/', stdio: 'inherit' });
 
 // Run server
 console.log('Starting server');
