@@ -49,4 +49,4 @@ child_process.execSync('yarn upgrade nodepi-server', { cwd: root + '/modules/', 
 
 // Run server
 console.log('Starting server');
-child_process.execSync('node "' + root + '/modules/node_modules/nodepi/build/server/index.js"', { cwd: root + '/modules/', stdio: 'inherit' });
+child_process.execSync('node "' + root + '/modules/node_modules/nodepi-server/build/server/index.js"', { cwd: root + '/modules/', stdio: 'inherit' });
